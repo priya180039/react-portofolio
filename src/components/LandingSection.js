@@ -4,12 +4,6 @@ import FullScreenSection from "./FullScreenSection";
 import photo from "../assets/photo.jpg";
 import { Typewriter } from "react-simple-typewriter";
 
-const greeting = "Hello, I am Pete!";
-const bio1 = "A frontend developer";
-const bio2 = "specialised in React";
-
-// Implement the UI for the LandingSection component according to the instructions.
-// Use a combination of Avatar, Heading and VStack components.
 const LandingSection = () => (
   <FullScreenSection
     id="bio-section"
@@ -26,7 +20,7 @@ const LandingSection = () => (
           Hello, I'm Bagus
         </Text>
       </VStack>
-      <Heading textAlign="center">
+      <Heading textAlign="center" px={4}>
         <Typewriter
           words={[
             "A frontend website developer specialized in ReactJS",

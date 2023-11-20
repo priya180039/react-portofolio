@@ -1,14 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faInstagram,
   faLinkedin,
-  faMedium,
-  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Text, useMediaQuery } from "@chakra-ui/react";
 import { useState } from "react";
 
 const socials = [
@@ -24,11 +22,16 @@ const socials = [
     icon: faLinkedin,
     url: "https://www.linkedin.com/in/priya-bagus-amanullah-2a7256250/",
   },
+  {
+    icon: faInstagram,
+    url: "https://www.instagram.com/mystaline_29/",
+  },
 ];
 
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [headerCollapse, setHeaderCollapse] = useState(false);
+  const isSmallerThanSmall = useMediaQuery("(max-width: 640px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,43 +83,52 @@ const Header = () => {
         <HStack
           px={16}
           py={4}
-          justifyContent="space-between"
+          justifyContent={isSmallerThanSmall[0] ? "center" : "space-between"}
           alignItems="center"
         >
           <nav>
-            <HStack spacing={4}>
+            <HStack spacing={0}>
               {socials.map((social, index) => (
-                <a
+                <Button
+                  as="a"
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="social-links"
+                  bg="#18181b"
                 >
                   <FontAwesomeIcon icon={social.icon} size="2x" />
-                </a>
+                </Button>
               ))}
             </HStack>
           </nav>
-          <nav>
-            <HStack spacing={8}>
-              <Text
-                as="a"
-                fontSize="xl"
-                href="/#bio-session"
-                onClick={() => handleClick("bio")()}
-              >
-                Bio
-              </Text>
-              <Text
-                as="a"
-                fontSize="xl"
-                href="/#projects-session"
-                onClick={() => handleClick("projects")()}
-              >
-                Projects
-              </Text>
-            </HStack>
-          </nav>
+          {!isSmallerThanSmall[0] && (
+            <nav>
+              <HStack spacing={4}>
+                <Button
+                  as="a"
+                  fontSize="xl"
+                  href="/#bio-session"
+                  onClick={() => handleClick("bio")()}
+                  className="social-links"
+                  bg="#18181b"
+                >
+                  Bio
+                </Button>
+                <Button
+                  as="a"
+                  fontSize="xl"
+                  href="/#projects-session"
+                  onClick={() => handleClick("projects")()}
+                  className="social-links"
+                  bg="#18181b"
+                >
+                  Projects
+                </Button>
+              </HStack>
+            </nav>
+          )}
         </HStack>
       </Box>
     </Box>
