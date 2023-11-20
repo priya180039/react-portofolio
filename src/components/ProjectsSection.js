@@ -28,6 +28,14 @@ const projects = [
     iframeSrc: "https://cleauve-cleanime.vercel.app/",
     codeSrc: "https://github.com/priya180039/react-cleanime",
   },
+  {
+    title: "Portofolio Website",
+    description:
+      "A website that was created to contains all my projects. This website was built using React.js also Chakra UI as UI framework",
+    getImageSrc: () => require("../images/photo3.jpg"),
+    iframeSrc: "https://cleauve-portofolio.vercel.app/",
+    codeSrc: "https://github.com/priya180039/react-portofolio",
+  },
 ];
 
 const ProjectsSection = () => {
