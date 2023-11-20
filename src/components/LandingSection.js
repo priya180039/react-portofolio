@@ -12,6 +12,7 @@ const bio2 = "specialised in React";
 // Use a combination of Avatar, Heading and VStack components.
 const LandingSection = () => (
   <FullScreenSection
+    id="bio-section"
     justifyContent="center"
     alignItems="center"
     isDarkBackground

@@ -102,18 +102,18 @@ const Header = () => {
               <Text
                 as="a"
                 fontSize="xl"
-                href="/#projects-session"
-                onClick={() => handleClick("projects")()}
+                href="/#bio-session"
+                onClick={() => handleClick("bio")()}
               >
-                Projects
+                Bio
               </Text>
               <Text
                 as="a"
                 fontSize="xl"
-                href="/#contactme-session"
-                onClick={() => handleClick("contactme")()}
+                href="/#projects-session"
+                onClick={() => handleClick("projects")()}
               >
-                Contact Me
+                Projects
               </Text>
             </HStack>
           </nav>

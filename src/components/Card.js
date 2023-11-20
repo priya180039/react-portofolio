@@ -3,14 +3,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-const Card = ({ title, description, imageSrc }) => {
+const Card = ({ title, description, imageSrc, iframeSrc }) => {
   // Implement the UI for the Card component according to the instructions.
   // You should be able to implement the component with the elements imported above.
   // Feel free to import other UI components from Chakra UI if you wish to.
   return (
     <Box rounded="xl" bg="gray.100">
       <VStack spacing={6}>
-        <Image src={imageSrc} rounded="xl" />
+        {iframeSrc ? (
+          <Box
+            pos="relative"
+            w="full"
+            h="300px"
+            roundedTop="xl"
+            overflow="hidden"
+          >
+            <iframe
+              title={title}
+              src={iframeSrc}
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+            ></iframe>
+          </Box>
+        ) : (
+          <Image src={imageSrc} roundedTop="xl" />
+        )}
         <Heading px={4} w="full" color="black" size="md">
           {title}
         </Heading>
