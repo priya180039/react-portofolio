@@ -16,7 +16,7 @@ const LandingSection = () => {
   return (
     <FullScreenSection
       id="bio-section"
-      my={4}
+      pt={10}
       justifyContent="center"
       alignItems="center"
       isDarkBackground
