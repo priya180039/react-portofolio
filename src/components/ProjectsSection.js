@@ -9,7 +9,7 @@ const projects = [
     description:
       "A tool that was built for final project purpose. Built using flask that contains logic to convert text to vector, then process it using model that was created using Skip-gram and Random Forest. The final output will be shown whether the news text is hoax or valid.",
     getImageSrc: () => require("../images/photo1.png"),
-    iframeSrc: "https://kifqufe.domcloud.io/",
+    iframeSrc: "https://cleauve2.domcloud.io/",
     codeSrc: "https://github.com/priya180039/myproject",
   },
   {
