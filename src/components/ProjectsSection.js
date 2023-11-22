@@ -21,7 +21,7 @@ const projects = [
     codeSrc: "https://github.com/priya180039/react-website",
   },
   {
-    title: "Cleanime (On Progress)",
+    title: "Cleanime",
     description:
       "A website that collect anime informations that stored on public API. This was one of my practice to get more fluent in interacting with APIs. Anime that collected was show in grid layout and there's search bar to search specific anime's name that will shows all anime that contains that name, also at some sections i added infinite scroll feature to increase user experience.",
     getImageSrc: () => require("../images/photo3.png"),
