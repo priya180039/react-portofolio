@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Box, Button, HStack, Text, useMediaQuery } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -21,10 +17,6 @@ const socials = [
   {
     icon: faLinkedin,
     url: "https://www.linkedin.com/in/priya-bagus-amanullah-2a7256250/",
-  },
-  {
-    icon: faInstagram,
-    url: "https://www.instagram.com/mystaline_29/",
   },
 ];
 
@@ -125,6 +117,16 @@ const Header = () => {
                   bg="#18181b"
                 >
                   Projects
+                </Button>
+                <Button
+                  as="a"
+                  fontSize="xl"
+                  href="/#contactme-session"
+                  onClick={() => handleClick("contactme")()}
+                  className="social-links"
+                  bg="#18181b"
+                >
+                  Contact Me
                 </Button>
               </HStack>
             </nav>
