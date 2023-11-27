@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);

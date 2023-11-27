@@ -15,7 +15,15 @@ import React, { useState } from "react";
 import { MdOpenInNew } from "react-icons/md";
 import { BiCodeAlt } from "react-icons/bi";
 
-const Card = ({ title, description, imageSrc, iframeSrc, codeSrc }) => {
+const Card = ({
+  title,
+  description,
+  imageSrc,
+  tech,
+  time,
+  iframeSrc,
+  codeSrc,
+}) => {
   const [isHover, setHover] = useState(false);
   const isSmallerThanMedium = useMediaQuery("(max-width: 768px)");
   const isSmallerThanSmall = useMediaQuery("(max-width: 640px)");
@@ -131,8 +139,14 @@ const Card = ({ title, description, imageSrc, iframeSrc, codeSrc }) => {
         <Heading px={4} w="full" color="black" size="md">
           {title}
         </Heading>
-        <Text px={4} m={0} pb={4} color="black" as="p">
+        <Text px={4} m={0} color="black" as="p">
           {description}
+        </Text>
+        <Text textAlign="left" px={4} w="full" color="black" as="p">
+          {"Tech Stack: " + tech}
+        </Text>
+        <Text textAlign="left" px={4} w="full" pb={4} color="black" as="p">
+          {"Duration: " + time}
         </Text>
         {/* <HStack as="button" w="full" pb={4} px={4}>
           <Text color="black">See more</Text>
